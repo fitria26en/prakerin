@@ -1,0 +1,3 @@
+  $provinsi = Provinsi::whereId($id)->first();
+'nama_provinsi' => $provinsi['nama_provinsi'],
+        

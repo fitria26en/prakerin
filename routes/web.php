@@ -23,6 +23,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
 
+use App\Http\Controllers\FrontendCobtroller;
+Route::resource('frontend', FrontendCobtroller::class);
+
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi', ProvinsiController::class);
 

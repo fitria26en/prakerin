@@ -16,7 +16,7 @@
                      <th>No</th>
                      <th>Nama Kecamatan</th>
                      <th>Nama Kota</th>
-                     <th>Action</th>
+                     <th><center>Action</center></th>
                   </thead>
                   <tbody>
                   @php $no = 1; @endphp

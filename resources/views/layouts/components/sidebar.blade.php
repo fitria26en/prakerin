@@ -21,6 +21,7 @@
                        <a class="dropdown-item" href="{{ route('kelurahan.index') }}"><b>Kelurahan</b></a>
                        <a class="dropdown-item" href="{{ route('rw.index') }}"><b>Rw</b></a>
                        <a class="dropdown-item" href="{{ route('kasus.index') }}"><b>Kasus</b></a>
+                       
                 </ul>
                 </ul>
             </li>

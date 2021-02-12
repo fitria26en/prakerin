@@ -27,10 +27,10 @@
                      @foreach ($kasus as $data)
                         <tr>
                            <td align="center">{{ $no++ }}</td>
-                           <td><center><b>Provinsi : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}<br>
+                           <td><b>Provinsi : {{$data->rw->kelurahan->kecamatan->kota->provinsi->nama_provinsi}}<br>
                                           Kota : {{$data->rw->kelurahan->kecamatan->kota->nama_kota}}<br>
                                           Kecamatan : {{$data->rw->kelurahan->kecamatan->nama_kecamatan}}<br>
-                                          Kelurahan : {{$data->rw->kelurahan->nama_kelurahan}}<br></b></center></td>
+                                          Kelurahan : {{$data->rw->kelurahan->nama_kelurahan}}<br></b></td>
                            <td>{{ $data->rw->nama }} </td>
                            <td>{{ $data->jumlah_positif }} </td>
                            <td>{{ $data->jumlah_sembuh }} </td>

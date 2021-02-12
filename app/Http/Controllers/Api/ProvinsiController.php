@@ -46,6 +46,7 @@ class ProvinsiController extends Controller
         $provinsi = new Provinsi();
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->nama_provinsi = $request->nama_provinsi;
+        $provinsi->tanggal = $request->tanggal;
         $provinsi->save();
 
         $prov = [
@@ -119,6 +120,7 @@ class ProvinsiController extends Controller
             $provinsi = Provinsi::whereId($id)->update([
                 'kode_provinsi' => $request->kode_provinsi,
                 'nama_provinsi' => $request->nama_provinsi,
+                'tanggal' =>$request->tanggal,
             ]);
 
             if ($provinsi) {
