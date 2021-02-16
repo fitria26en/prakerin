@@ -19,12 +19,12 @@ $sembuh = DB::table('rws')
       ->select('kasuses.jumlah_positif',
       'kasuses.jumlah_sembuh','kasuses.jumlah_meninggal')
       ->join('kasuses','rws.id','=','kasuses.id_rw')
-      ->sum('kasuses.jumlah_positif');
+      ->sum('kasuses.jumlah_sembuh');
 $meninggal = DB::table('rws')
       ->select('kasuses.jumlah_positif',
       'kasuses.jumlah_sembuh','kasuses.jumlah_meninggal')
       ->join('kasuses','rws.id','=','kasuses.id_rw')
-      ->sum('kasuses.jumlah_positif');
+      ->sum('kasuses.jumlah_meninggal');
 
       $data = Kasus::all();
         $provinsi = DB::table('provinsis')

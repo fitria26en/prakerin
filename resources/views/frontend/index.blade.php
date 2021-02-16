@@ -28,7 +28,7 @@
         <!-- Responsive Stylesheet -->
         <link rel="stylesheet" href="{{asset('infinity/css/responsive.css')}}">
     </head>
-
+    
     <body id="body">
 
     	<div id="preloader">
@@ -42,36 +42,7 @@
 	    <!-- 
 	    Header start
 	    ==================== -->
-        <div class="container">
-            <nav class="navbar navbar-fixed-top  navigation " id="top-nav">
-                <a class="navbar-brand" href="#">
-                    
-                <!--<img src="{{asset('infinity/images/logo.png')}}" alt="">-->
-                </a>
-
-              <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
-                  <i class="tf-ion-android-menu"></i>
-              </button>
-              <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-                <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#service">SERVICES</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-        </div>
         
-
 	    <section class="hero-area bg-1">
 	        <div class="container">
 	            <div class="row">
@@ -89,6 +60,7 @@
 	                            <ul id="countdown_dashboard">
 	                                <li>
 	                                    <div class="dash days_dash">
+                                        @csrf
                                         <div><h2 > {{$positif}} </h2></div>
 	                                        <span class="dash_title">Positive</span>
 	                                    </div>
@@ -126,14 +98,14 @@
         <!-- 
         About start
         ==================== -->
+        
         <section  class="section about bg-gray" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 col-sm-12 wow fadeInLeft">
                         <div class="content">
                         	<div class="sub-heading">
-                        	
-          <?php
+                        	<?php
         $datapositif = file_get_contents("https://api.kawalcorona.com/positif");
         $positif = json_decode($datapositif, TRUE);
         $datasembuh = file_get_contents("https://api.kawalcorona.com/sembuh");
@@ -189,6 +161,7 @@
                                  </table>
                           </div>
                    </div>
+    
         <br><br><br><br><br><br><br>           
           <!--table untuk tampilan provinsi=-->
           <div class="card-header ">
@@ -232,19 +205,14 @@
                             
                         </div>
                     </div>
-                    <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
-                        <div class="about-slider">
-                            <img src="{{asset('infinity/images/about/1.jpg')}}" alt="">
-                            <img src="{{asset('infinity/images/about/2.jpg')}}" alt="">
-                            <img src="{{asset('infinity/images/about/3.jpg')}}" alt="">
-                        </div>
-                    </div>
-                </div>
+                  
+                
             </div>
         </section><!-- #about close -->
         <!-- 
         About start
         ==================== -->
+      
 
         <!-- 
         Service start
@@ -253,132 +221,78 @@
             <div class="container">
                 <div class="row">
                     <div class="heading wow fadeInUp">
-                        <h2>Find Better Solutions Build Better Products</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                        <h2>Apa Itu Virus Covid19(Korona)?</h2>
+                        <p>Mengenali Apa Itu Korona Dan Bagaimana menanggulangi wabah Virus ini</p>
                     </div>
                     <div class="col-sm-6 col-md-3 wow fadeInLeft">
                         <div class="block">
                             <i class="tf-strategy"></i>   
-                            <h3>Fully Responsive</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                            <h3>Apa Itu Virus Corona?</h3>
+                            <p>Virus Corona merupakan zoonosis, artinya ditularkan antara hewan dan manusia
+                            menurut penyelidikan yang telah dilakukan, SARS-CoV ditularkan dari kucing luwak atau yang lebih
+                            dikenal dengan musang ke manusia dan MERS-CoV dari unta ke manusia. Namun beberapa Virus Coronajuga dikenal pada hewan hean yang sebelunya
+                            belum pernah menginfeksi manusia.</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
                         <div class="block">
                             <i class="tf-circle-compass"></i>
-                        	<h3>Speed Optimized</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                        	<h3>Ciri-Ciri Terinfeksi Virus Corona </h3>
+                            <p>Gejala infeksi virus Corona sendiri cukup sulit dilihat pada awalnya. Hal ini dikarenakan
+                            tidak semua orang yang sudah terinfeksi akan langsung memperlihatkan gejala gejala awal dari virus
+                            Corona. Dibutuhkan @hingga 14 hari sampai orang yang sudah terinfeksi tersebut mengeluarkan tanda atau ciri-ciri virus Corona</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
                         <div class="block">
                             <i class="tf-anchor2"></i>
-                            <h3>Tons of Feature</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                            <h3>Cara Mencegah Virus Corona</h3>
+                            <p>Menjaga kesehatan dan kebersihan dengan cara:<br>
+                            Mencuci tangan secara teratur menggunakan sabun <br>
+                            Menutup mulut dan hidung ketika batuk atau bersin<br>
+                            Memasak daging atau telur hingga matang<br>
+                            Hindari kontak langsung dengan siapapun yang menunjukan gejala virus corona</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
                         <div class="block">
                             <i class="tf-globe"></i>
-                            <h3>Fully SEO Optimized</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                            
+                            <h3>Gejala Virus Corona Pada Hari Ke Hari</h3>
+                            <p>Hari 1:Pasien mengalami gejala berupa demam <br>Hari 5:pasien mengalami gejala berupa kesulitan bernafas
+                            <br>Hari 7:Pasien mengalami gejala berupa kondisi yang semakin memburuk <br>
+                            Hari 8:Pasien dengan kasus yang parah akan mengalami gejala berupa gangguan pernafasan akut.
+                            <br>Hari 10:pasien mengalami gejala sakit perut dan kehilangan nafsu makan hanya sebagian kecil yang mati
+                            <br>Hari 17:Rata-rata orang yang sudah sembuh dari gejala virus Corona akan diperbolehkan pulang dari rumah sakit
+                            setelah dua setengah minggu.</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInLeft">
-                        <div class="block">
-                            <i class="tf-strategy"></i>   
-                            <h3>Fully Responsive</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
+                    <<div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
                         <div class="block">
                             <i class="tf-circle-compass"></i>
-                            <h3>Speed Optimized</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                            <h3>Ciri-Ciri Terinfeksi Corona Dengan Tingkat Yang Lebih Tinggi</h3>
+                            <p>1.Sulit bernafas atau nafas pendek <br> 2.Nyeri atau sakit pada bagian dada<br>
+                            3.Pusing atau tidak mampu berdiri dan menggerakan tubuh <br> 4.Bibir atau wajah tampak membiru</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
                         <div class="block">
                             <i class="tf-anchor2"></i>
-                            <h3>Tons of Feature</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                        
+                        	<h3>Ciri-Ciri Terinfeksi Virus Corona Dengan Tingkat Yang Lebih Rendah</h3>
+                            <p>1.demam <br> 2.batuk <br> 3.sesak nafas</p>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
-                        <div class="block">
-                            <i class="tf-globe"></i>
-                            <h3>Cloud Option</h3>
-                            <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-                        </div>
-                    </div>
+                
                 </div>
             </div><!-- .container close -->
         </section><!-- #service close -->
 
-        <section class="call-to-action section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 wow text-center">
-                        <div class="block">
-                            <h2>Subscribe to our mailing list</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-                            <div class="col-lg-6 offset-lg-3">
-                                <div class="input-group">
-                                  <input type="text" class="form-control" placeholder="Your Email Address Here">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-default btn-subscription" type="button">Subscribe</button>
-                                  </span>
-                                </div><!-- /input-group -->
-                              </div><!-- /.col-lg-6 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- #call-to-action close -->
 
         <!-- 
         Contact start
         ==================== -->
-        <section id="contact" class="section contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="block">
-                            <div class="heading wow fadeInUp">
-                                <h2>Get In Touch</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.3s">
-                    	<div class="form-group">
-                    	    <form action="#" method="post" id="contact-form">
-                    	        <div class="input-field">
-                    	            <input type="text" class="form-control" placeholder="Your Name" name="name">
-                    	        </div>
-                    	        <div class="input-field">
-                    	            <input type="email" class="form-control" placeholder="Email Address" name="email">
-                    	        </div>
-                    	        <div class="input-field">
-                    	            <textarea class="form-control" placeholder="Your Message" rows="3" name="message"></textarea>
-                    	        </div>
-                    	        <button class="btn btn-send" type="submit">Send me</button>
-                    	    </form>
-
-                    	    <div id="success">
-                    	        <p>Your Message was sent successfully</p>
-                    	    </div>
-                    	    <div id="error">
-                    	        <p>Your Message was not sent successfully</p>
-                    	    </div>
-                    	</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
         <section clas="wow fadeInUp">
         	<div class="map-wrapper">
         	</div>
@@ -389,7 +303,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <p>Copyright &copy; <a href="http://www.Themefisher.com">Themefisher</a>| All right reserved.</p>
+                            <p>Copyright &copy; <a href="http://www.Themefisher.com">Fitri Andriani</a>| Smk Assalaam Bandung.</p>
                         </div>
                     </div>
                 </div>
