@@ -105,7 +105,13 @@
                     <div class="col-md-7 col-sm-12 wow fadeInLeft">
                         <div class="content">
                         	<div class="sub-heading">
-                        	<?php
+                                 </tbody>
+                                 </table>
+                                 </tbody>
+                                 </table>
+                          </div>
+                   </div>
+                   <?php
         $datapositif = file_get_contents("https://api.kawalcorona.com/positif");
         $positif = json_decode($datapositif, TRUE);
         $datasembuh = file_get_contents("https://api.kawalcorona.com/sembuh");
@@ -165,7 +171,7 @@
         <br><br><br><br><br><br><br>           
           <!--table untuk tampilan provinsi=-->
           <div class="card-header ">
-                    <h3 class="card-title">Data Kasus Corona virus Global</h3>
+                    <h3 class="card-title">Data Kasus Corona virus Negara</h3>
                     </div>
                      <div class="card-body" >
                          <div style="height:600px;overflow:auto;margin-right:15px;">
